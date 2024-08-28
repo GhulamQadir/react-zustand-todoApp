@@ -1,0 +1,17 @@
+.addTodoDiv {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(99, 98, 98);
+  color: white;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+}
