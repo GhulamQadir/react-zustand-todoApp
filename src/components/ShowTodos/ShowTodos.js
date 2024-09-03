@@ -30,9 +30,9 @@ function ShowTodos() {
 
     return (
         <div className='flex flex-col justify-center items-center ml-2 mr-2 mt-3'>
-            <div className='w-full sm:w-2/3 md:w-2/4'>
+            {todos && <div className='w-full sm:w-2/3 md:w-2/4'>
                 <p className='m-2 text-white text-2xl font-bold'>Tasks to do - {todos.length}</p>
-            </div>
+            </div>}
             {todos && todos.map((todo, index) => {
                 return <div key={index} className='w-full sm:w-2/3 md:w-2/4 bg-gray-900 m-2 pt-2 pb-2 pl-3 pr-3'>
                     {todo.isEdit ? <div className='flex items-center'>
