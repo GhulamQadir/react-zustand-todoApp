@@ -30,7 +30,7 @@ function ShowTodos() {
 
     return (
         <div className='flex flex-col justify-center items-center ml-2 mr-2 mt-3'>
-            {todos && <div className='w-full sm:w-2/3 md:w-2/4'>
+            {todos.length>0 && <div className='w-full sm:w-2/3 md:w-2/4'>
                 <p className='m-2 text-white text-2xl font-bold'>Tasks to do - {todos.length}</p>
             </div>}
             {todos && todos.map((todo, index) => {
