@@ -17,9 +17,6 @@ function ShowTodos() {
         updateTodo: state.updateTodo,
         cancelEdit: state.cancelEdit
     }))
-    useEffect(() => {
-        resetTodoEdits()
-    }, [])
 
     const handleEdit = async (index) => {
         await resetTodoEdits()
@@ -27,20 +24,29 @@ function ShowTodos() {
         setUpdatedVal(todos[index].todoVal)
     }
 
+    const handleUpdate = (index) => {
+        if (updatedVal.trim().length) {
+            updateTodo(index, updatedVal)
+        }
+    }
+
+    useEffect(() => {
+        resetTodoEdits()
+    }, [])
 
     return (
         <div className='flex flex-col justify-center items-center ml-2 mr-2 mt-3'>
-            {todos.length>0 && <div className='w-full sm:w-2/3 md:w-2/4'>
+            {todos.length && <div className='w-full sm:w-2/3 md:w-2/4'>
                 <p className='m-2 text-white text-2xl font-bold'>Tasks to do - {todos.length}</p>
             </div>}
             {todos && todos.map((todo, index) => {
                 return <div key={index} className='w-full sm:w-2/3 md:w-2/4 bg-gray-900 m-2 pt-2 pb-2 pl-3 pr-3'>
                     {todo.isEdit ? <div className='flex items-center'>
                         <div className='w-full'>
-                            <input className='rounded-md text-white placeholder:text-white w-full pl-3 pr-2 pt-1 pb-1 bg-transparent border-2 border-inputBorder shadow-sm focus:outline-none focus:border-purple-700 focus:text-white' value={updatedVal} type='text' onChange={(e) => setUpdatedVal(e.target.value)} placeholder="Enter todo" />
+                            <textarea className='resize-y rounded-md text-white placeholder:text-white w-full pl-3 pr-2 pt-1 pb-1 bg-transparent border-2 border-inputBorder shadow-sm focus:outline-none focus:border-purple-700 focus:text-white' value={updatedVal} type='text' onChange={(e) => setUpdatedVal(e.target.value)} placeholder="Enter updated value" />
                         </div>
                         <div className='flex justify-end'>
-                            <button className='text-green-500 text-2xl p-2 m-1' onClick={() => updateTodo(index, updatedVal)}><TiTick /></button>
+                            <button className='text-green-500 text-2xl p-2 m-1' onClick={() => handleUpdate(index)}><TiTick /></button>
                             <button className='text-red-500 text-2xl p-2 m-1 ' onClick={() => cancelEdit(index)}><RxCross2 /></button>
                         </div>
                     </div> :
