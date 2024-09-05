@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-zustand-todoApp/static/css/main.7d19ba3e.css",
-    "main.js": "/react-zustand-todoApp/static/js/main.30037357.js",
+    "main.css": "/react-zustand-todoApp/static/css/main.fbb06a34.css",
+    "main.js": "/react-zustand-todoApp/static/js/main.84753cd3.js",
     "static/js/453.09aa8351.chunk.js": "/react-zustand-todoApp/static/js/453.09aa8351.chunk.js",
     "index.html": "/react-zustand-todoApp/index.html",
-    "main.7d19ba3e.css.map": "/react-zustand-todoApp/static/css/main.7d19ba3e.css.map",
-    "main.30037357.js.map": "/react-zustand-todoApp/static/js/main.30037357.js.map",
+    "main.fbb06a34.css.map": "/react-zustand-todoApp/static/css/main.fbb06a34.css.map",
+    "main.84753cd3.js.map": "/react-zustand-todoApp/static/js/main.84753cd3.js.map",
     "453.09aa8351.chunk.js.map": "/react-zustand-todoApp/static/js/453.09aa8351.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d19ba3e.css",
-    "static/js/main.30037357.js"
+    "static/css/main.fbb06a34.css",
+    "static/js/main.84753cd3.js"
   ]
 }
